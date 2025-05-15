@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSolutions - Automazioni per Windows e Linux</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bg-sand {
+            background-color: #f5e8d0;
+        }
+        .text-sand {
+            color: #f5e8d0;
+        }
+        .border-sand {
+            border-color: #f5e8d0;
+        }
+        .hover-bg-sand:hover {
+            background-color: #f5e8d0;
+        }
+        .hover-text-sand:hover {
+            color: #f5e8d0;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white text-black font-sans">
+    <!-- Header/Navbar -->
+    <header class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-robot text-2xl text-sand"></i>
+                <a href="#" class="text-2xl font-bold hover:text-sand transition-all">Auto<span class="text-sand">Solutions</span></a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-sand transition-all font-medium">Home</a>
+                <a href="#services" class="hover:text-sand transition-all font-medium">Servizi</a>
+                <a href="#about" class="hover:text-sand transition-all font-medium">Chi Sono</a>
+                <a href="#contact" class="hover:text-sand transition-all font-medium">Contatti</a>
+            </nav>
+            
+            <button class="md:hidden text-xl" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black py-4 px-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-sand transition-all">Home</a>
+                <a href="#services" class="hover:text-sand transition-all">Servizi</a>
+                <a href="#about" class="hover:text-sand transition-all">Chi Sono</a>
+                <a href="#contact" class="hover:text-sand transition-all">Contatti</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-sand py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Automazione su <span class="text-black">Misura</span></h1>
+                <p class="text-lg mb-8">Semplifichiamo i tuoi processi lavorativi con script personalizzati per Windows e Linux. Risparmia tempo e aumenta la produttività.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-all text-center font-medium">Richiedi un preventivo</a>
+                    <a href="#services" class="border-2 border-black px-6 py-3 rounded-lg hover:bg-black hover:text-white transition-all text-center font-medium">Scopri di più</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Automazione" class="w-64 h-64 md:w-80 md:h-80 floating">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">I Nostri <span class="text-sand">Servizi</span></h2>
+                <p class="max-w-2xl mx-auto">Offro soluzioni di automazione personalizzate per ogni esigenza, ottimizzate per il tuo sistema operativo.</p>
+            </div>
+            
+			
+            <!--<div class="grid grid-cols-1 md:grid-cols-3 gap-8">-->
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Windows Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 card-hover transition-all">
+                    <div class="bg-sand w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fab fa-windows text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Automazione Windows</h3>
+                    <p class="text-gray-700 mb-6">Script PowerShell e Batch personalizzati per automatizzare qualsiasi attività su Windows, dalla gestione dei file alla configurazione di sistema.</p>
+                </div>    
+				
+				 
+                
+                <!-- Linux Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 card-hover transition-all">
+                    <div class="bg-sand w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fab fa-linux text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Automazione Linux</h3>
+                    <p class="text-gray-700 mb-6">Script Bash e Python per server e workstation Linux, con supporto a cron job, gestione dei permessi e automazione di sistemi distribuiti.</p>
+                </div>
+            </div>
+			
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-sand">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Team" class="w-full max-w-md mx-auto rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">Chi <span class="text-black">Sono</span></h2>
+                    <p class="mb-6">AutoSolutions nasce dall'esperienza di sistemista nell'automazione di processi per aziende e privati.</p>
+                    <p class="mb-6">La missione è quella di semplificare il lavoro quotidiano attraverso soluzioni software personalizzate, affidabili e facili da usare.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-4">L'Approccio</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-black text-sand rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1">
+                                    <span>1</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Analisi</h4>
+                                    <p class="text-sm">Studio il tuo flusso di lavoro per identificare le aree che beneficiano maggiormente dell'automazione.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-black text-sand rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1">
+                                    <span>2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Sviluppo</h4>
+                                    <p class="text-sm">Creo script personalizzati, ottimizzati per il tuo sistema operativo e le tue specifiche esigenze.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-black text-sand rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1">
+                                    <span>3</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Supporto</h4>
+                                    <p class="text-sm">Fornisco documentazione chiara e assistenza continua per garantire il perfetto funzionamento delle nostre soluzioni.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- Contact Section -->
+<section id="contact" class="py-20 bg-black text-white">
+  <div class="container mx-auto px-4 text-center max-w-xl">
+    <h2 class="text-3xl font-bold mb-6">Contattami</h2>
+    <p class="mb-8">
+      Hai un processo che vorresti automatizzare? Contattaci direttamente per una consulenza gratuita.
+    </p>
+
+    <div class="flex justify-center">
+      <div class="flex items-center space-x-4">
+        <div class="bg-sand text-black rounded-full w-10 h-10 flex items-center justify-center">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="text-left">
+          <h4 class="font-bold text-sand">Email</h4>
+          <p>disco.dance@live.it</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Domande <span class="text-sand">Frequenti</span></h2>
+                <p class="max-w-2xl mx-auto">Ecco alcune delle domande che ci vengono poste più spesso.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-sand transition-all faq-toggle">
+                            <h3 class="text-left font-bold">Quanto costa sviluppare uno script personalizzato?</h3>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="hidden p-6 border-t border-gray-200 faq-content">
+                            <p>Il costo varia in base alla complessità dello script e al tempo necessario per lo sviluppo. Offriamo una consulenza gratuita per valutare le tue esigenze e fornirti un preventivo preciso senza impegno.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-sand transition-all faq-toggle">
+                            <h3 class="text-left font-bold">Posso modificare gli script in futuro?</h3>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="hidden p-6 border-t border-gray-200 faq-content">
+                            <p>Assolutamente sì. Tutti i nostri script vengono consegnati con il codice sorgente e documentazione dettagliata. Offriamo anche servizi di manutenzione e aggiornamento per adattare gli script alle tue nuove esigenze.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-sand transition-all faq-toggle">
+                            <h3 class="text-left font-bold">Quanto tempo ci vuole per sviluppare uno script?</h3>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="hidden p-6 border-t border-gray-200 faq-content">
+                            <p>I tempi variano da poche ore per script semplici a qualche settimana per soluzioni complesse che richiedono testing approfonditi. Durante la consulenza iniziale ti forniremo una stima accurata dei tempi di sviluppo.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-sand transition-all faq-toggle">
+                            <h3 class="text-left font-bold">Fornite assistenza dopo la consegna?</h3>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="hidden p-6 border-t border-gray-200 faq-content">
+                            <p>Sì, tutti i nostri script includono 3 mesi di supporto gratuito. Successivamente è possibile sottoscrivere un contratto di manutenzione annuale che include aggiornamenti e assistenza prioritaria.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center text-center">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-sand">AutoSolutions</h3>
+                    <p>Automazione di processi per Windows e Linux facile!</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 text-sand">Link Veloci</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-sand transition-all">Home</a></li>
+                        <li><a href="#services" class="hover:text-sand transition-all">Servizi</a></li>
+                        <li><a href="#about" class="hover:text-sand transition-all">Chi Sono</a></li>
+                        <li><a href="#contact" class="hover:text-sand transition-all">Contatti</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 text-sand">Servizi</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-sand transition-all">Automazioni</a></li>
+                    </ul>
+                </div>
+             <!--   
+                <div>
+                    <h4 class="font-bold mb-4 text-sand">Newsletter</h4>
+                    <p class="mb-4">Iscriviti per ricevere aggiornamenti e offerte speciali.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="La tua email" class="px-4 py-2 rounded-l-lg w-full text-black focus:outline-none">
+                        <button class="bg-sand text-black px-4 py-2 rounded-r-lg hover:bg-white transition-all">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>-->
+				
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col items-center justify-center text-center">
+                <p>&copy; 2025 AutoSolutions. Tutti i diritti riservati.</p>
+                <!--
+				<div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-sand transition-all">Privacy Policy</a>
+                    <a href="#" class="hover:text-sand transition-all">Termini di Servizio</a>
+                    <a href="#" class="hover:text-sand transition-all">Cookie Policy</a>
+                </div>-->
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
